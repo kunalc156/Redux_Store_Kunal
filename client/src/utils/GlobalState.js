@@ -17,14 +17,14 @@ const StoreProvider = ({ value = [], ...props }) => {
     categories: [],
     currentCategory: '',
   }); */
-
+  
   //return <Provider value={[state, dispatch]} {...props} />;  
   return <Provider store={store} {...props} />
 }; 
 
 const useStoreContext = () => {
   const dispatch = useDispatch();
-  const state = useSelector(state => state);
+  const state = useSelector(state => state); 
   console.log(state);
  // return useContext(StoreContext);
  return [state ,dispatch];
